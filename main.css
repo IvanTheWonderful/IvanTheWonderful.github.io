@@ -1,0 +1,31 @@
+.landing-page h1 {
+    position: relative;
+    text-align: center;
+    top: 1em;
+    font-size: 8rem;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 158, 174);
+    z-index: 2;
+}
+
+.landing-page img {
+    position:absolute;
+    margin:0;
+    width: 100%;
+    height:45rem;
+    top: 20px;
+    z-index: 0;
+}
+
+.landing-page div {
+    background: hsl(2, 100%, 69%);
+    opacity: 0.3;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    height:46.4rem;
+    /* Question: how to let this height=45rem+20px?? */
+    width: 100%;
+    z-index: 1;
+}
