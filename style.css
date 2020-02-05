@@ -1,3 +1,5 @@
 h1, h3 {
     text-align: center;
+    position: relative;
+    margin: 2em;
 }
