@@ -1,3 +1,21 @@
+/* "go-back" button on the picture pages */
+.button-go-back{
+  border: none;
+  padding: none;
+  border-radius: 30px;
+  background: rgb(238, 81, 81);
+  width: 5em;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.button-go-back:hover{
+  box-shadow: 0.2em 0.1em 0.2em black;
+  transition: box-shadow 0.4s ease;
+}
+
+
+/* The main page */
 body{
     margin: 0;
 }
@@ -43,7 +61,53 @@ body{
     border: black dotted;
 }
 
+
+/* The navigation page */
 .navi{
     position: relative;
-
 }
+
+.button-to-navi button{
+    border: none;
+    border-radius: 90px;
+    padding: 0;
+    background: chocolate;
+    height: 3em;
+    width: 3em;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+    font-weight: bolder;
+    opacity: 0.9;
+}
+
+.button-to-navi button:hover{
+  box-shadow: 0.2em 0.1em 0.3em rgb(0, 0, 0);
+  transition: box-shadow 0.4s ease;
+}
+
+
+
+/* The Count Down */
+.timer {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timer h1 {
+    font-weight: normal;
+  }
+  
+  .timer li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  .timer li span {
+    display: block;
+    font-size: 4.5rem;
+  }
