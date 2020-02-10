@@ -21,25 +21,23 @@ body{
     margin: 0;
 }
 
+.main-page{
+  display: flex;
+  flex-direction: column;
+  background-image: url(flying-hearts.png);
+  background-repeat: no-repeat;
+  background-size: auto 52em;
+}
+
 .main-page h1{
     position: relative;
     text-align: center;
     top: 0.3em;
-    font-size: 7rem;
+    font-size: 7em;
     font-style: italic;
     font-family: 'Dancing Script', cursive;
     color: rgb(102, 1, 18);
     z-index: 2;
-}
-
-.main-page img {
-    position:absolute;
-    opacity: 0.8;
-    margin:0;
-    width: 100%;
-    height:38rem;
-    top: 20px;
-    z-index: 0;
 }
 
 /* The tint effect */
@@ -49,7 +47,7 @@ body{
     position: absolute;
     margin: 0;
     top: 0;
-    height:calc(38rem + 20px);
+    height:51em;
     width: 100%;
     z-index: 1;
 }
@@ -86,6 +84,7 @@ body{
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
   background: lightcoral ;
+  margin-top: 1em;
 }
 
 .title{
@@ -231,7 +230,7 @@ body{
 
 .timer li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 4.5em;
 }
 /* End: count Down */
 /*  */
