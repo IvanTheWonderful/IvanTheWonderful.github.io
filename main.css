@@ -91,7 +91,7 @@ body{
   grid-row: 1;
   grid-column: 1;
   text-align: center;
-  font-size: 4rem;
+  font-size: 4em;
   font-style: italic;
   font-family: 'Dancing Script', cursive;
   color: rgb(102, 1, 18);
@@ -114,7 +114,7 @@ body{
 
 .link-list li{
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   height: calc(100%/7);
   width: 100%;
   align-items: center;
