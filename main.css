@@ -110,6 +110,7 @@ body{
   grid-column: 2/5;
   list-style: none;
   border: 2px red solid;
+  z-index: 10;
 }
 
 .link-list li{
