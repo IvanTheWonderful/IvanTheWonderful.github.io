@@ -24,16 +24,18 @@ body{
 .main-page{
   display: flex;
   flex-direction: column;
-  background-image: url(flying-hearts.png);
+  background-image: url(./Photos/flying-hearts.png);
   background-repeat: no-repeat;
   background-size: auto 52em;
+  /* height: 30em; */
 }
 
 .main-page h1{
+    margin: 1.5em;
     position: relative;
     text-align: center;
     top: 0.3em;
-    font-size: 7em;
+    font-size: 5em;
     font-style: italic;
     font-family: 'Dancing Script', cursive;
     color: rgb(102, 1, 18);
@@ -47,7 +49,7 @@ body{
     position: absolute;
     margin: 0;
     top: 0;
-    height:51em;
+    height: 40em;
     width: 100%;
     z-index: 1;
 }
@@ -62,20 +64,20 @@ body{
     border: 1px white solid;
     border-radius: 90px;
     padding: 0;
-    background: gold;
-    height: 2.5em;
-    width: 2.5em;
-    color: white;
+    background: rgb(177, 65, 65);
+    height: 4em;
+    width: 4em;
+    color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bolder;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     z-index: 20;
 }
 
 .button-top button:hover{
   box-shadow: 0.2em 0.1em 0.3em rgb(0, 0, 0);
-  opacity: 1;
+  /* opacity: 1; */
   transition: all 0.4s ease;
 }
 
@@ -116,7 +118,7 @@ body{
 .link-list li{
   display: flex;
   font-size: 1.2em;
-  height: calc(100%/7);
+  height: calc(100%/8);
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -131,7 +133,7 @@ body{
 }
 
 .link-list li:nth-child(odd){
-  background: chocolate;
+  background: rgb(197, 235, 247);
 }
 /* End: navigation page */
 /*  */
@@ -143,6 +145,7 @@ body{
   gap: 0.2em;
   padding: 0.4em;
   background: rgb(253, 89, 89);
+  place-items: center;
 }
 
 .picture:nth-of-type(even){
@@ -161,13 +164,14 @@ body{
 .picture p{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.5em;
+  max-width: 10em;
   font-style: italic;
   align-self: center;
   text-align: center;
 }
 
 .picture img{
-  width: 14.2em;
+  width: 17em;
   border: 4px dotted rgb(255, 0, 119);
 }
 
@@ -207,11 +211,11 @@ body{
   grid-column: 1;
 }
 
-.P2020{
+.count-down{
   display: flex;
   flex-direction: column;
 }
-.P2020 h2{
+.count-down h2{
   font-style: italic;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
