@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Wang's Portfolio - Free Quote</title>
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <script src="./scripts/switch-language.js" defer></script>
+    <script src="./scripts/contact.js" defer></script>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <!-- only one of "nav-desktop" and "nav-mobile" will show on user interface. -->
+        <div class="nav-desktop" id="nav-desktop">
+            <a href="./index.html">
+                <img class="logo" src="./images/logo2.png" alt="the logo of iWebCreation"></a>
+            <a class="nav-links en expertise-link" href="./index.html#my-expertise">my expertise</a>
+            <a class="nav-links cn expertise-link" href="./index.html#my-expertise">技术栈</a>
+            <a class="nav-links en price-link" href="./index.html#price-table">Pricing</a>
+            <a class="nav-links cn price-link" href="./index.html#price-table">价目表</a>
+            <a class="nav-links en testimonial-link" href="./index.html#testimonial">Testimonials</a>
+            <a class="nav-links cn testimonial-link" href="./index.html#testimonial">客户评价</a>
+            <a class="nav-links en work-link" href="./index.html#work">my works</a>
+            <a class="nav-links cn work-link" href="./index.html#work">项目展示</a>
+            <a class="nav-links en contact-link" href="#">free quote</a>
+            <a class="nav-links cn contact-link" href="#">免费估价</a>
+            <div class="nav-language-switch">
+                <button class="english-switch" onclick="switchToEnglish()">Eng</button>
+                <span class="nav-language-switch-slash">/</span>
+                <button class="chinese-switch" onclick="switchToChinese()">中文</button>
+            </div>
+        </div>
+        <div class="nav-mobile" id="nav-mobile">
+            <!-- This div is to create an overlay effect when drawer menu is shown. -->
+            <div class="nav-mobile-background_overlay-hidden" id="nav-mobile-backgournd_overlay"></div>
+            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
+            <button class="nav-mobile-button" onclick="toggleAll()">
+                <div id="nav-mobile-button-div1"></div>
+                <div id="nav-mobile-button-div2"></div>
+                <div id="nav-mobile-button-div3"></div>
+                <div id="nav-mobile-button-div4"></div>
+            </button>
+            <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
+                <li>
+                    <div class="nav-language-switch">
+                        <button class="english-switch" onclick="switchToEnglish()">Eng</button>
+                        <span id="nav-language-switch-slash"> / </span>
+                        <button class="chinese-switch" onclick="switchToChinese()">中文</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-links en expertise-link" href="./index.html#my-expertise">my expertise</a>
+                    <a class="nav-links cn expertise-link" href="./index.html#my-expertise">技术栈</a>
+                </li>
+                <li>
+                    <a class="nav-links en price-link" href="./index.html#price-table">Pricing</a>
+                    <a class="nav-links cn price-link" href="./index.html#price-table">价目表</a>
+                </li>
+                <li>
+                    <a class="nav-links en testimonial-link" href="./index.html#testimonial">Testimonials</a>
+                    <a class="nav-links cn testimonial-link" href="./index.html#testimonial">客户评价</a>
+                </li>
+                <li>
+                    <a class="nav-links en work-link" href="./index.html#work">my works</a>
+                    <a class="nav-links cn work-link" href="./index.html#work">项目展示</a>
+                </li>
+                <li>
+                    <a class="nav-links en contact-link" href="#">free quote</a>
+                    <a class="nav-links cn contact-link" href="#">免费估价</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1>Get A Free Quote</h1>
+        <form id="quote-form" action="https://api.staticforms.xyz/submit" method="post" data-multi-step>
+            <div class="card active" data-step>
+                <div class="label-n-input">
+                    <label class="en" for="name">*Full Name</label>
+                    <input type="text" name="name" id="input-name">
+                </div>
+                <div class="label-n-input">
+                    <label class="en" for="phone">*Phone Number</label>
+                    <input type="number" name="phone" id="input-phone">
+                </div>
+                <div class="label-n-input">
+                    <label class="en" for="email">*Email</label>
+                    <input type="email" name="email" id="input-email">
+                </div>
+                <button class="change-page" data-next>Next Page</button>
+            </div>
+            <div class="card" data-step>
+                <div class="label-n-input">
+                    <span class="en">Do you currently have a website?</span>
+                    <div class="yes-or-no">
+                        <div>
+                            <input type="radio" name="$haveWebsite" id="input-have_website" value="I have a website.">
+                            <label for="input-have-website">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="$haveWebsite" id="input-dont-have-website"
+                                value="I don't have a website.">
+                            <label for="input-have-website">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="label-n-input">
+                    <label class="en" for="input-improvement">If you currently have a website, What improvements would
+                        you
+                        like to
+                        make?</label>
+                    <textarea name="$improvement" id="input-improvement" cols="30" rows="8"></textarea>
+                </div>
+                <div class="label-n-input">
+                    <label class="en" for="input-deadline">What is the anticipited deadline for your new website?</label>
+                    <input type="date" name="$deadline" id="input-deadline">
+                </div>
+                <div class="buttons">
+                    <button class="change-page" data-previous>Previous Page</button>
+                    <button class="change-page" data-next>Next Page</button>
+                </div>
+            </div>
+            <div class="card" data-step>
+                <h3>What features would you like to see on your website?</h3>
+                <fieldset>
+                    <div>
+                        <input type="checkbox" name="$about-us" id="input-about-us">
+                        <label class="en" for="input-about-us">About Us</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$services-with-pricing" id="input-service-with-pricing">
+                        <label class="en" for="input-services-with-pricing">Services with Pricing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$products-display" id="input-products-display">
+                        <label class="en" for="input-products-display">Products Display</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$sell-products" id="input-sell-products">
+                        <label class="en" for="input-sell-products">Sell Products(e-commerce)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$gallery" id="input-gallery">
+                        <label class="en" for="input-gallery">Photos/Gallery</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$online-booking" id="input-online-booking">
+                        <label class="en" for="input-online-booking">Online Booking</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$contact-us" id="input-contact-us">
+                        <label class="en" for="input-contact-us">Contact Us</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$faq" id="input-faq">
+                        <label class="en" for="input-faq">Frequently Asked Questions</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$careers" id="input-careers">
+                        <label class="en" for="input-careers">Careers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$health-safety" id="input-health-safety">
+                        <label class="en" for="input-health-safety">Health & Safety</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$customer-review" id="input-customer-review">
+                        <label class="en" for="input-customer-review">Customer Reviews/Testimonials</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$social-media" id="input-social-media">
+                        <label class="en" for="input-social-media">Links to Social Media</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$blog" id="input-blog">
+                        <label class="en" for="input-blog">Blog</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$online-form" id="input-online-form">
+                        <label class="en" for="input-online-form">Online Form</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$customer-login" id="input-customer-login">
+                        <label class="en" for="input-customer-login">Customer Login</label>
+                    </div>
+                    <div>
+                        <label class="en" for="input-other-feature">Other Features</label>
+                        <textarea name="$other-feature" id="input-other-feature" cols="30" rows="8"></textarea>
+                    </div>
+                </fieldset>
+                <input type="hidden" name="accessKey" value="a4dc0c20-2586-4f73-a8c7-3bf388054f9a">
+                <input type="text" name="honeypot" style="display:none">
+                <input type="hidden" name="subject" value="New Customer Requesting Quote!" />
+                <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                <div class="buttons">
+                    <button class="change-page" data-previous>Previous Page</button>
+                    <input class="change-page" type="submit" value="Submit" />
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h4 class="en">
+            Integrity, professionalism, and upgrading skills<br>continuously.
+        </h4>
+        <h4 class="cn">
+            诚信 专业 不断进取
+        </h4>
+        <p class="en">
+            &copy;2022 Ivan Wang <i>All Rights Reserved</i>.
+            <br>
+            This website is designed and developed by Ivan Wang using HTML5, CSS3, and vanila Javascript.
+        </p>
+        <p class="cn">
+            &copy;2022 版权所有：王海峰
+            此网站是由我本人，用HTML5、CSS3和JavaScript一砖一瓦搭建而成。
+        </p>
+    </footer>
+</body>
+
+</html>

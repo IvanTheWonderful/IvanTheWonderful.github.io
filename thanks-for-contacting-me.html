@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Wang's Portfolio - Thanks for contacting me!</title>
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <!-- only one of "nav-desktop" and "nav-mobile" will show on user interface. -->
+        <div class="nav-desktop" id="nav-desktop">
+            <a href="./index.html">
+                <img class="logo" src="./images/logo2.png" alt="the logo of iWebCreation"></a>
+            <a class="nav-links en expertise-link" href="./index.html#my-expertise">my expertise</a>
+            <a class="nav-links cn expertise-link" href="./index.html#my-expertise">技术栈</a>
+            <a class="nav-links en price-link" href="./index.html#price-table">Pricing</a>
+            <a class="nav-links cn price-link" href="./index.html#price-table">价目表</a>
+            <a class="nav-links en testimonial-link" href="./index.html#testimonial">Testimonials</a>
+            <a class="nav-links cn testimonial-link" href="./index.html#testimonial">客户评价</a>
+            <a class="nav-links en work-link" href="./index.html#work">my works</a>
+            <a class="nav-links cn work-link" href="./index.html#work">项目展示</a>
+            <a class="nav-links en contact-link" href="#">free quote</a>
+            <a class="nav-links cn contact-link" href="#">免费估价</a>
+            <div class="nav-language-switch">
+                <button class="english-switch" onclick="switchToEnglish()">Eng</button>
+                <span class="nav-language-switch-slash">/</span>
+                <button class="chinese-switch" onclick="switchToChinese()">中文</button>
+            </div>
+        </div>
+        <div class="nav-mobile" id="nav-mobile">
+            <!-- This div is to create an overlay effect when drawer menu is shown. -->
+            <div class="nav-mobile-background_overlay-hidden" id="nav-mobile-backgournd_overlay"></div>
+            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
+            <button class="nav-mobile-button" onclick="toggleAll()">
+                <div id="nav-mobile-button-div1"></div>
+                <div id="nav-mobile-button-div2"></div>
+                <div id="nav-mobile-button-div3"></div>
+                <div id="nav-mobile-button-div4"></div>
+            </button>
+            <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
+                <li>
+                    <div class="nav-language-switch">
+                        <button class="english-switch" onclick="switchToEnglish()">Eng</button>
+                        <span id="nav-language-switch-slash"> / </span>
+                        <button class="chinese-switch" onclick="switchToChinese()">中文</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-links en expertise-link" href="./index.html#my-expertise">my expertise</a>
+                    <a class="nav-links cn expertise-link" href="./index.html#my-expertise">技术栈</a>
+                </li>
+                <li>
+                    <a class="nav-links en price-link" href="./index.html#price-table">Pricing</a>
+                    <a class="nav-links cn price-link" href="./index.html#price-table">价目表</a>
+                </li>
+                <li>
+                    <a class="nav-links en testimonial-link" href="./index.html#testimonial">Testimonials</a>
+                    <a class="nav-links cn testimonial-link" href="./index.html#testimonial">客户评价</a>
+                </li>
+                <li>
+                    <a class="nav-links en work-link" href="./index.html#work">my works</a>
+                    <a class="nav-links cn work-link" href="./index.html#work">项目展示</a>
+                </li>
+                <li>
+                    <a class="nav-links en contact-link" href="#">free quote</a>
+                    <a class="nav-links cn contact-link" href="#">免费估价</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="thanks-page-main">
+        <h1>Thank you for your interest! Your request has been submitted.</h1>
+        <h2>I will contact you within the next 3 business days to provide you with
+            your quote.</h2>
+    </main>
+    <footer>
+        <h4 class="en">
+            Integrity, professionalism, and upgrading skills<br>continuously.
+        </h4>
+        <h4 class="cn">
+            诚信 专业 不断进取
+        </h4>
+        <p class="en">
+            &copy;2022 Ivan Wang <i>All Rights Reserved</i>.
+            <br>
+            This website is designed and developed by Ivan Wang using HTML5, CSS3, and vanila Javascript.
+        </p>
+        <p class="cn">
+            &copy;2022 版权所有：王海峰
+            此网站是由我本人，用HTML5、CSS3和JavaScript一砖一瓦搭建而成。
+        </p>
+    </footer>
+</body>
+
+</html>
