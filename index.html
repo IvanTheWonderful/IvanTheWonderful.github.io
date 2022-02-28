@@ -15,6 +15,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <script src="./scripts/expertise-observer.js" defer></script>
     <script src="./scripts/switch-language.js" defer></script>
     <script src="./scripts/mywork-card-observer.js" defer></script>
@@ -27,7 +28,7 @@
 </head>
 
 <body>
-    <nav id="nav-bar">
+    <nav id="nav-bar" class="at-top">
         <!-- only one of "nav-desktop" and "nav-mobile" will show on user interface. -->
         <div class="nav-desktop" id="nav-desktop">
             <a href="#">
@@ -51,13 +52,16 @@
         <div class="nav-mobile" id="nav-mobile">
             <!-- This div is to create an overlay effect when drawer menu is shown. -->
             <div class="nav-mobile-background_overlay-hidden" id="nav-mobile-backgournd_overlay"></div>
-            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
-            <button class="nav-mobile-button" onclick="toggleAll()">
-                <div id="nav-mobile-button-div1"></div>
-                <div id="nav-mobile-button-div2"></div>
-                <div id="nav-mobile-button-div3"></div>
-                <div id="nav-mobile-button-div4"></div>
-            </button>
+            <div id="nav-mobile-bar">
+                <img id="mobile-logo" src="./images/logo2.png" alt="The logo of iWebCreations">
+                <button class="nav-mobile-button" onclick="toggleAll()">
+                    <!-- The empty divs below are used for creating animation effects. -->
+                    <div id="nav-mobile-button-div1"></div>
+                    <div id="nav-mobile-button-div2"></div>
+                    <div id="nav-mobile-button-div3"></div>
+                    <div id="nav-mobile-button-div4"></div>
+                </button>
+            </div>
             <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
                 <li>
                     <div class="nav-language-switch">
@@ -250,8 +254,6 @@
                 <p class="cn subtitle">让您的企业如虎添翼</p>
             </div>
         </section>
-        <!-- This "secret-nav-style-switch" is a hidden div that serves as a navbar observer trigger -->
-        <div id="secret-nav-style-switch"></div>
         <section id="my-expertise">
             <h3 class="en">my expertise</h3>
             <h3 class="cn">我的技术栈</h3>
@@ -346,9 +348,8 @@
                     <span>Shopify</span>
                 </div>
             </div>
-            <p class="en">I am a passionate web developer with strong problem solving skills. I believe customers are
-                the
-                most important part of my business. My websites are 100% hand-crafted and custom made. I insist on
+            <p class="en">I am a passionate web developer with strong problem solving skills, and customer satisfaction
+                is always my #1 priority. My websites are 100% hand-crafted and custom made. I insist on
                 writing code from scratch to ensure that my customer receives a high-quality end product.</p>
             <p class="cn">
                 我是一个充满工作热情的程序员，善于解决各种技术难题。<br>我一直坚信客户至上，所以我坚持用100%纯手工编码的方式，为客户打造时尚美观，质量上乘的网站！
@@ -664,64 +665,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- In-class project: Aloha -->
-                <!-- <div class="work-card">
-                    <img class="work-card-image" src="./images/project-aloha-screenshot.png"
-                        alt="a screenshot of the landing page of my work">
-                    <div class="work-card-intro">
-                        <button class="close-card-intro">X</button>
-                        <p class="en stacks">
-                            Stacks: CSS, HTML
-                        </p>
-                        <div class="work-card-intro-links">
-                            <a target="_blank" rel="noopener noreferrer" class="view_site"
-                                href="https://ivan0001wang.github.io/"><span class="en">View Website</span><span class="cn">看网站</span></a>
-                            <a target="_blank" rel="noopener noreferrer" class="view_code"
-                                href="https://github.com/IvanTheWonderful/Red-Project-Aloha"><span class="en">View Code</span><span class="cn">看代码</span></a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Restaurant Review -->
-                <!-- <div class="work-card">
-                    <img class="work-card-image" src="./images/project-restaurant_review-screenshot.png"
-                        alt="a screenshot of the landing page of my work">
-                    <div class="work-card-intro">
-                        <button class="close-card-intro">X</button>
-                        <p class="en stacks">
-                            Stacks: JSON, Web API, Javascript, CSS, HTML
-                        </p>
-                        <div class="work-card-intro-links">
-                            <a target="_blank" rel="noopener noreferrer" class="view_site"
-                                href="./src/Project-Restaurant_Review/index.html">
-                                <span class="en">View Website</span><span class="cn">看网站</span>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" class="view_code"
-                                href="https://github.com/IvanTheWonderful/Project-Resraurant_Review">
-                                <span class="en">View Code</span><span class="cn">看代码</span>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Covid APP -->
-                <!-- <div class="work-card">
-                    <img class="work-card-image" src="./images/project-covid19_app-screenshot.png"
-                        alt="a screenshot of the landing page of my work">
-                    <div class="work-card-intro">
-                        <button class="close-card-intro">X</button>
-                        <p class="en stacks">
-                            Stacks: React, JSON, API Call, Javascript, CSS, HTML
-                        </p>
-                        <div class="work-card-intro-links">
-                            <a target="_blank" rel="noopener noreferrer" class="view_site" href="#">
-                                <span class="en">View Website</span><span class="cn">看网站</span>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" class="view_code"
-                                href="https://github.com/IvanTheWonderful/Project-COVID19_App">
-                                <span class="en">View Code</span><span class="cn">看代码</span>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
                 <!-- Daniella's Jewelry -->
                 <div class="work-card">
                     <img class="work-card-image" src="./images/project-daniella-jewelry-screenshot.png"
@@ -759,36 +702,12 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="contact" id="contact">
-            <h3 class="en">contact me</h3>
-            <h3 class="cn">联系我</h3>
-            <form action="https://api.staticforms.xyz/submit" method="post">
-                <div id="contact-form-upper">
-                    <input class="en" type="text" name="name" placeholder="Your Name">
-                    <input class="cn" type="text" name="name" placeholder="姓名">
-                    <input class="en" type="text" name="email" placeholder="Your Email">
-                    <input class="cn" type="text" name="email" placeholder="电子邮箱">
-                </div>
-                <div id="contact-form-lower">
-                    <textarea class="en" name="message" placeholder="Message"></textarea>
-                    <textarea class="cn" name="message" placeholder="内容"></textarea>
-                </div>
-                <input type="text" name="honeypot" style="display:none">
-                <input type="hidden" name="accessKey" value="a4dc0c20-2586-4f73-a8c7-3bf388054f9a">
-                <input type="hidden" name="subject" value="Contact Ivan Wang" />
-                <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
-                <input class="en submit-button" type="submit" value="Submit" />
-                <input class="cn submit-button" type="submit" value="提交" />
-            </form>
-        </section> -->
     </main>
     <footer>
-        <h4 class="en">
-            Integrity, professionalism, and upgrading skills<br>continuously.
-        </h4>
-        <h4 class="cn">
-            诚信 专业 不断进取
-        </h4>
+        <h3>
+            <span class="en">Integrity, professionalism, and upgrading skills<br>continuously.</span>
+            <span class="cn">诚信 专业 不断进取</span>
+        </h3>
         <p class="en">
             &copy;2022 Ivan Wang <i>All Rights Reserved</i>.
             <br>

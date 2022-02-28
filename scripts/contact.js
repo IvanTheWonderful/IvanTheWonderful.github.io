@@ -19,13 +19,11 @@ multiStepForm.addEventListener("click", (e) => {
         e.preventDefault();
         // If user click on "next page" button, set incrementor to 1
         incrementor = 1;
-        console.log("next", currentStep);
     } else if (e.target.matches("[data-previous]")) {
         // Prevent the buttons from submitting form by default
         e.preventDefault();
         // If user click on "previous page" button, set incrementor to -1
         incrementor = -1;
-        console.log("previous", currentStep);
     }
     // If user didn't click anything, don't do anything
     if (incrementor == null) return;
@@ -37,14 +35,16 @@ multiStepForm.addEventListener("click", (e) => {
         showCurrentStep();
     }
 });
-
+// When user clicks on "next page" or "previous page", do the following:
+// 1. remove ".hide" from the new "currentStep", and add ".active" to it.
+// 2. remove "active" from the previous "currentStep", and add ".hide" to it.
 formSteps.forEach((step) => {
     step.addEventListener("animationend", (e) => {
         formSteps[currentStep].classList.remove("hide");
         e.target.classList.toggle("hide", !e.target.classList.contains("active"));
     });
 });
-// Define a function to show what current step is
+// Define a function to give "currentStep" an ".active"
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep);

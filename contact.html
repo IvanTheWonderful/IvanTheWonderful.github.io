@@ -8,6 +8,7 @@
     <title>Ivan Wang's Portfolio - Free Quote</title>
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <script src="./scripts/switch-language.js" defer></script>
     <script src="./scripts/contact.js" defer></script>
 </head>
@@ -37,13 +38,16 @@
         <div class="nav-mobile" id="nav-mobile">
             <!-- This div is to create an overlay effect when drawer menu is shown. -->
             <div class="nav-mobile-background_overlay-hidden" id="nav-mobile-backgournd_overlay"></div>
-            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
-            <button class="nav-mobile-button" onclick="toggleAll()">
-                <div id="nav-mobile-button-div1"></div>
-                <div id="nav-mobile-button-div2"></div>
-                <div id="nav-mobile-button-div3"></div>
-                <div id="nav-mobile-button-div4"></div>
-            </button>
+            <div id="nav-mobile-bar">
+                <button class="nav-mobile-button" onclick="toggleAll()">
+                    <!-- The empty divs below are used for creating animation effects. -->
+                    <div id="nav-mobile-button-div1"></div>
+                    <div id="nav-mobile-button-div2"></div>
+                    <div id="nav-mobile-button-div3"></div>
+                    <div id="nav-mobile-button-div4"></div>
+                </button>
+                <img src="./images/logo2.png" alt="The logo of iWebCreations">
+            </div>
             <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
                 <li>
                     <div class="nav-language-switch">
@@ -76,35 +80,47 @@
         </div>
     </nav>
     <main>
-        <h1>Get A Free Quote</h1>
+        <h1>
+            <span class="en">Get A Free Quote</span>
+            <span class="cn">获取免费报价</span>
+        </h1>
         <form id="quote-form" action="https://api.staticforms.xyz/submit" method="post" data-multi-step>
             <div class="card active" data-step>
                 <div class="label-n-input">
                     <label class="en" for="name">*Full Name</label>
-                    <input type="text" name="name" id="input-name">
+                    <label class="cn" for="name">*姓名</label>
+                    <input type="text" name="name" id="input-name" required>
                 </div>
                 <div class="label-n-input">
                     <label class="en" for="phone">*Phone Number</label>
-                    <input type="number" name="phone" id="input-phone">
+                    <label class="cn" for="phone">*电话</label>
+                    <input type="number" name="phone" id="input-phone" required>
                 </div>
                 <div class="label-n-input">
                     <label class="en" for="email">*Email</label>
-                    <input type="email" name="email" id="input-email">
+                    <label class="cn" for="email">*电子邮箱</label>
+                    <input type="email" name="email" id="input-email" required>
                 </div>
-                <button class="change-page" data-next>Next Page</button>
+                <button class="change-page" data-next>
+                    <span class="en">Next</span>
+                    <span class="cn">下一页</span>
+                </button>
             </div>
             <div class="card" data-step>
                 <div class="label-n-input">
                     <span class="en">Do you currently have a website?</span>
+                    <span class="cn">您的企业现在已经有网站了吗？</span>
                     <div class="yes-or-no">
                         <div>
                             <input type="radio" name="$haveWebsite" id="input-have_website" value="I have a website.">
-                            <label for="input-have-website">Yes</label>
+                            <label class="en" for="input-have-website">Yes</label>
+                            <label class="cn" for="input-have-website">是</label>
                         </div>
                         <div>
                             <input type="radio" name="$haveWebsite" id="input-dont-have-website"
                                 value="I don't have a website.">
-                            <label for="input-have-website">No</label>
+                            <label class="en" for="input-have-website">No</label>
+                            <label class="cn" for="input-have-website">否</label>
                         </div>
                     </div>
                 </div>
@@ -113,103 +129,135 @@
                         you
                         like to
                         make?</label>
+                    <label class="cn" for="input-improvement">如果您有网站，您希望做哪些改进？</label>
                     <textarea name="$improvement" id="input-improvement" cols="30" rows="8"></textarea>
                 </div>
                 <div class="label-n-input">
-                    <label class="en" for="input-deadline">What is the anticipited deadline for your new website?</label>
+                    <label class="en" for="input-deadline">What is the anticipated deadline for your new
+                        website?</label>
+                    <label class="cn" for="input-deadline">您希望您的网站哪天完工？</label>
                     <input type="date" name="$deadline" id="input-deadline">
                 </div>
                 <div class="buttons">
-                    <button class="change-page" data-previous>Previous Page</button>
-                    <button class="change-page" data-next>Next Page</button>
+                    <button class="en change-page" data-previous>Previous</button>
+                    <button class="cn change-page" data-previous>上一页</button>
+                    <button class="en change-page" data-next>Next</button>
+                    <button class="cn change-page" data-next>下一页</button>
                 </div>
             </div>
             <div class="card" data-step>
-                <h3>What features would you like to see on your website?</h3>
+                <h3>
+                    <span class="en">What features would you like to see on your website?</span>
+                    <span class="cn">您希望网站包含哪些页面以及功能？</span>
+                </h3>
                 <fieldset>
                     <div>
                         <input type="checkbox" name="$about-us" id="input-about-us">
                         <label class="en" for="input-about-us">About Us</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$services-with-pricing" id="input-service-with-pricing">
-                        <label class="en" for="input-services-with-pricing">Services with Pricing</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$products-display" id="input-products-display">
-                        <label class="en" for="input-products-display">Products Display</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$sell-products" id="input-sell-products">
-                        <label class="en" for="input-sell-products">Sell Products(e-commerce)</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$gallery" id="input-gallery">
-                        <label class="en" for="input-gallery">Photos/Gallery</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$online-booking" id="input-online-booking">
-                        <label class="en" for="input-online-booking">Online Booking</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$contact-us" id="input-contact-us">
-                        <label class="en" for="input-contact-us">Contact Us</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$faq" id="input-faq">
-                        <label class="en" for="input-faq">Frequently Asked Questions</label>
+                        <label class="cn" for="input-about-us">关于我们/自我介绍页面</label>
                     </div>
                     <div>
                         <input type="checkbox" name="$careers" id="input-careers">
                         <label class="en" for="input-careers">Careers</label>
+                        <label class="cn" for="input-careers">招聘页面</label>
                     </div>
                     <div>
                         <input type="checkbox" name="$health-safety" id="input-health-safety">
                         <label class="en" for="input-health-safety">Health & Safety</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$customer-review" id="input-customer-review">
-                        <label class="en" for="input-customer-review">Customer Reviews/Testimonials</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="$social-media" id="input-social-media">
-                        <label class="en" for="input-social-media">Links to Social Media</label>
+                        <label class="cn" for="input-health-safety">安全卫生条例页面</label>
                     </div>
                     <div>
                         <input type="checkbox" name="$blog" id="input-blog">
                         <label class="en" for="input-blog">Blog</label>
+                        <label class="cn" for="input-blog">博客页面</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="$online-form" id="input-online-form">
-                        <label class="en" for="input-online-form">Online Form</label>
+                        <input type="checkbox" name="$products-display" id="input-products-display">
+                        <label class="en" for="input-products-display">Products Display</label>
+                        <label class="cn" for="input-products-display">产品展示页面</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$contact-us" id="input-contact-us">
+                        <label class="en" for="input-contact-us">Contact Us</label>
+                        <label class="cn" for="input-contact-us">联系我们页面</label>
                     </div>
                     <div>
                         <input type="checkbox" name="$customer-login" id="input-customer-login">
                         <label class="en" for="input-customer-login">Customer Login</label>
+                        <label class="cn" for="input-customer-login">客户账号登录页面</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$services-with-pricing" id="input-service-with-pricing">
+                        <label class="en" for="input-services-with-pricing">Services with Pricing</label>
+                        <label class="cn" for="input-services-with-pricing">服务项目与价目表</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$sell-products" id="input-sell-products">
+                        <label class="en" for="input-sell-products">Sell Products(e-commerce)</label>
+                        <label class="cn" for="input-sell-products">卖产品（网店）</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$gallery" id="input-gallery">
+                        <label class="en" for="input-gallery">Photos/Gallery</label>
+                        <label class="cn" for="input-gallery">展示图片</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$video" id="input-video">
+                        <label class="en" for="input-video">Show Videos</label>
+                        <label class="cn" for="input-video">展示视频</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$online-booking" id="input-online-booking">
+                        <label class="en" for="input-online-booking">Online Booking</label>
+                        <label class="cn" for="input-online-booking">网上预约</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$faq" id="input-faq">
+                        <label class="en" for="input-faq">Frequently Asked Questions</label>
+                        <label class="cn" for="input-faq">常见问题</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$customer-review" id="input-customer-review">
+                        <label class="en" for="input-customer-review">Customer Reviews/Testimonials</label>
+                        <label class="cn" for="input-customer-review">客户评论/推荐</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$social-media" id="input-social-media">
+                        <label class="en" for="input-social-media">Links to Social Media</label>
+                        <label class="cn" for="input-social-media">社交媒体链接</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="$online-form" id="input-online-form">
+                        <label class="en" for="input-online-form">Online Form</label>
+                        <label class="cn" for="input-online-form">网上填表</label>
                     </div>
                     <div>
                         <label class="en" for="input-other-feature">Other Features</label>
+                        <label class="cn" for="input-other-feature">其他功能</label>
                         <textarea name="$other-feature" id="input-other-feature" cols="30" rows="8"></textarea>
                     </div>
                 </fieldset>
                 <input type="hidden" name="accessKey" value="a4dc0c20-2586-4f73-a8c7-3bf388054f9a">
                 <input type="text" name="honeypot" style="display:none">
                 <input type="hidden" name="subject" value="New Customer Requesting Quote!" />
-                <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                <input type="hidden" name="redirectTo"
+                    value="https://www.iwebcreations.ca/thanks-for-contacting-me.html">
                 <div class="buttons">
-                    <button class="change-page" data-previous>Previous Page</button>
-                    <input class="change-page" type="submit" value="Submit" />
+                    <button class="change-page" data-previous>
+                        <span class="en">Previous</span>
+                        <span class="cn">上一页</span>
+                    </button>
+                    <input class="change-page en" type="submit" value="Submit" />
+                    <input class="change-page cn" type="submit" value="提交" />
                 </div>
             </div>
         </form>
     </main>
     <footer>
-        <h4 class="en">
-            Integrity, professionalism, and upgrading skills<br>continuously.
-        </h4>
-        <h4 class="cn">
-            诚信 专业 不断进取
-        </h4>
+        <h3>
+            <span class="en">Integrity, professionalism, and upgrading skills<br>continuously.</span>
+            <span class="cn">诚信 专业 不断进取</span>
+        </h3>
         <p class="en">
             &copy;2022 Ivan Wang <i>All Rights Reserved</i>.
             <br>

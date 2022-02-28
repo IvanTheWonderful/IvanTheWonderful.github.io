@@ -64,8 +64,8 @@ const myWorkLinkObserver = new IntersectionObserver(
         }
     },
     {
-        threshold: 0.1,
-        rootMargin: "50px",
+        threshold: 0.2,
+        rootMargin: "60px",
     }
 );
 myWorkLinkObserver.observe(myWork);

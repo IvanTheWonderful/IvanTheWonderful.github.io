@@ -6,7 +6,7 @@ const testimContent = Array.prototype.slice.call(
 );
 const testimLeftArrow = document.getElementById("left-arrow");
 const testimRightArrow = document.getElementById("right-arrow");
-var testimSpeed = 4500,
+var testimSpeed = 9000,
     currentSlide = 0,
     currentActive = 0,
     testimTimer,
