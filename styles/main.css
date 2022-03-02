@@ -461,6 +461,7 @@ textarea {
     margin-top: 3rem;
     background-image: url(../images/goodjob.jpg);
     background-size: cover;
+    background-position-x: 0%;
     background-repeat: no-repeat;
     background-color: rgb(44, 44, 44);
     background-blend-mode: overlay;
