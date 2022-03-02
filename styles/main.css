@@ -20,6 +20,7 @@ body {
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
     width: 100vw;
+    overflow-x: hidden;
     background-color: var(--main-black);
 }
 
@@ -33,9 +34,10 @@ section:not(:nth-of-type(1)) {
 
 h3 {
     color: whitesmoke;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 input,
@@ -69,6 +71,10 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#eng-h1-substitution {
+    max-width: 90vw;
 }
 
 /* Animation for h1 substitution */
@@ -132,7 +138,7 @@ textarea {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4rem 4rem;
+    padding: 4rem 0rem;
     background-image: url(../images/about-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -259,7 +265,7 @@ textarea {
 }
 
 .work-cards {
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -267,7 +273,7 @@ textarea {
 }
 
 .work-cards > div {
-    width: 40%;
+    width: 90%;
     transform-style: preserve-3d;
     margin-bottom: 4rem;
 }
@@ -443,6 +449,7 @@ textarea {
 /* ////////////////////////// */
 #testimonial {
     width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -460,8 +467,8 @@ textarea {
 .testimonial .wrap {
     position: relative;
     width: 100%;
-    max-width: 1020px;
-    padding: 0px 20px 30px;
+    max-width: 100vw;
+    padding: 0px 0px 30px;
     margin: auto;
 }
 
@@ -537,12 +544,12 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 70px 70px;
+    padding: 0 45px 70px;
     opacity: 0;
 }
 
 .testimonial-content > div.inactive {
-    opacity: 1;
+    opacity: 0;
 }
 
 .testimonial-content > div.active {
@@ -551,9 +558,9 @@ textarea {
 }
 
 .customer-review {
-    font-size: 1.15em;
+    font-size: 0.85rem;
     color: #eee;
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: left;
 }
@@ -565,7 +572,6 @@ textarea {
 .testimonial-content div.inactive .customer-review {
     animation: testimonial-content-out 0.5s ease-in-out forwards;
 }
-
 /* //////////////////////// */
 /* section testimonial: end */
 /* //////////////////////// */
@@ -637,24 +643,35 @@ textarea {
         min-width: 30rem;
     }
 
-    #contact-form-upper {
-        flex-direction: row;
+    #my-expertise {
+        padding: 4rem 4rem;
     }
 }
 
-@media all and (max-width: 300px) {
-    #testimonial {
-        font-size: 14px;
+@media only screen and (min-width: 750px) {
+    .work-cards > div {
+        width: 40%;
+        transform-style: preserve-3d;
+        margin-bottom: 4rem;
     }
 }
 
-@media all and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+
     .testimonial .arrow {
         font-size: 1.5em;
     }
 
-    .testimonial .testimonial-content div p {
+    .customer-review {
         line-height: 25px;
+        font-size: 1rem;
+    }
+
+    .testimonial-content > div {
+        padding: 0 70px 70px;
     }
 }
 /* //////////////// */
