@@ -38,13 +38,18 @@
         <div class="nav-mobile" id="nav-mobile">
             <!-- This div is to create an overlay effect when drawer menu is shown. -->
             <div class="nav-mobile-background_overlay-hidden" id="nav-mobile-backgournd_overlay"></div>
-            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
-            <button class="nav-mobile-button" onclick="toggleAll()">
-                <div id="nav-mobile-button-div1"></div>
-                <div id="nav-mobile-button-div2"></div>
-                <div id="nav-mobile-button-div3"></div>
-                <div id="nav-mobile-button-div4"></div>
-            </button>
+            <div id="nav-mobile-bar">
+                <a href="./index.html">
+                    <img id="mobile-logo" src="./images/logo2.png" alt="The logo of iWebCreations">
+                </a>
+                <button class="nav-mobile-button" onclick="toggleAll()">
+                    <!-- The empty divs below are used for creating animation effects. -->
+                    <div id="nav-mobile-button-div1"></div>
+                    <div id="nav-mobile-button-div2"></div>
+                    <div id="nav-mobile-button-div3"></div>
+                    <div id="nav-mobile-button-div4"></div>
+                </button>
+            </div>
             <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
                 <li>
                     <div class="nav-language-switch">
