@@ -149,7 +149,7 @@ textarea {
     background-repeat: no-repeat;
     background-color: rgb(44, 44, 44);
     background-blend-mode: overlay;
-    background-attachment: fixed;
+    background-attachment: local;
 }
 
 #expertise {
@@ -461,11 +461,11 @@ textarea {
     margin-top: 3rem;
     background-image: url(../images/goodjob.jpg);
     background-size: cover;
-    background-position-x: 0%;
+    background-position: 0% 100%;
     background-repeat: no-repeat;
     background-color: rgb(44, 44, 44);
     background-blend-mode: overlay;
-    background-attachment: fixed;
+    background-attachment: local;
     padding: 2.5rem 0;
 }
 
@@ -707,6 +707,11 @@ textarea {
 
     #my-expertise {
         padding: 4rem 4rem;
+        background-attachment: fixed;
+    }
+
+    #testimonial {
+        background-attachment: fixed;
     }
 }
 /* //////////////// */
