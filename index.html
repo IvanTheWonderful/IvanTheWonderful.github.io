@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="web developer, frontend, front end, developer, frontend developer, front end developer ivan wang, ivanthewonderful, html, css, javascript, react">
     <meta name="robots" content="index, follow">
-    <title>Ivan Wang's Portfolio</title>
+    <title>iWebCreations</title>
     <!-- import social media icons -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <link rel="stylesheet" href="./styles/navigation.css">
@@ -25,15 +25,6 @@
     <script src="./scripts/navbar-whole-background-observer.js" defer></script>
     <script src="./scripts/testimonial-carousel.js" defer></script>
     <script src="./scripts/pricing-observer.js" defer></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156666707-2">
-    </script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-156666707-2');
-    </script>
 </head>
 
 <body>
@@ -80,24 +71,24 @@
                     </div>
                 </li>
                 <li>
-                    <a class="nav-links en expertise-link" href="#my-expertise">my expertise</a>
-                    <a class="nav-links cn expertise-link" href="#my-expertise">技术栈</a>
+                    <a onclick="toggleAll()" class="nav-links en expertise-link" href="#my-expertise">my expertise</a>
+                    <a onclick="toggleAll()" class="nav-links cn expertise-link" href="#my-expertise">技术栈</a>
                 </li>
                 <li>
-                    <a class="nav-links en price-link" href="#price-table">Pricing</a>
-                    <a class="nav-links cn price-link" href="#price-table">价目表</a>
+                    <a onclick="toggleAll()" class="nav-links en price-link" href="#price-table">Pricing</a>
+                    <a onclick="toggleAll()" class="nav-links cn price-link" href="#price-table">价目表</a>
                 </li>
                 <li>
-                    <a class="nav-links en testimonial-link" href="#testimonial">Testimonials</a>
-                    <a class="nav-links cn testimonial-link" href="#testimonial">客户评价</a>
+                    <a onclick="toggleAll()" class="nav-links en testimonial-link" href="#testimonial">Testimonials</a>
+                    <a onclick="toggleAll()" class="nav-links cn testimonial-link" href="#testimonial">客户评价</a>
                 </li>
                 <li>
-                    <a class="nav-links en work-link" href="#work">my works</a>
-                    <a class="nav-links cn work-link" href="#work">项目展示</a>
+                    <a onclick="toggleAll()" class="nav-links en work-link" href="#work">my works</a>
+                    <a onclick="toggleAll()" class="nav-links cn work-link" href="#work">项目展示</a>
                 </li>
                 <li>
-                    <a class="nav-links en contact-link" href="./contact.html">free quote</a>
-                    <a class="nav-links cn contact-link" href="./contact.html">免费估价</a>
+                    <a onclick="toggleAll()" class="nav-links en contact-link" href="./contact.html">free quote</a>
+                    <a onclick="toggleAll()" class="nav-links cn contact-link" href="./contact.html">免费估价</a>
                 </li>
             </ul>
         </div>
@@ -256,7 +247,7 @@
                     <span>我是王海峰,</span>
                     <span>一名网页制作人。</span>
                 </div>
-                <p class="en sub-title">I specialize in crafting responsive websites that will help improve your
+                <p class="en subtitle">I specialize in crafting responsive websites that will help improve your
                     business efficiency.
                 </p>
                 <p class="cn subtitle">精诚合作，价格合理</p>
@@ -587,8 +578,6 @@
         <section class="work" id="work">
             <h3 class="en">featured works</h3>
             <h3 class="cn">项目展示</h3>
-            <!-- <p class="en work-how_to_use">Please click on the images to view project details.</p>
-            <p class="cn work-how_to_use">请点击图片查看项目具体信息。</p> -->
             <div class="work-cards">
                 <!-- Pawpaw Pet Spa & Grooming -->
                 <div class="work-card">
@@ -714,7 +703,7 @@
     </main>
     <footer>
         <h3>
-            <span class="en">Integrity, professionalism, and upgrading skills<br>continuously.</span>
+            <span class="en">Integrity, professionalism, and upgrading skills<br> continuously.</span>
             <span class="cn">诚信 专业 不断进取</span>
         </h3>
         <p class="en">
